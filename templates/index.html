@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>News</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="container-fluid top-section">
+			<div class="row pt-3 pb-3">
+				<div class="col-md-1 offset-md-3">
+					<i class="fa fa-newspaper-o fa-4x font-weight-bold"></i>
+				</div>
+				<div class="col-md-8">
+					<h1 class="display-4 font-weight-bold">
+						News Aggregator
+					</h1>
+				</div>
+			</div>
+		</div>		
+
+
+		<div class="container-fluid margin-my">
+			<div class="row">
+				<div class="col-md-2 btn-group-vertical btn-group-lg">
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt1">All News</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt2">India</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt3">Politics</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt4">World</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt5">Business</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt6">Technology</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt7">Startup</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt8">Science</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt9">Sports</button>
+					<button type="button" class="btn btn-dark text-left pt-3 pb-3" value="bt10">Entertainment</button>
+				</div>
+				<div class="loading text-center">
+            		<i class="fa fa-spinner fa-spin"></i>
+        		</div>
+				<div class="col-md-10 pl-5 pr-5 pt-3 article-cont">
+					<div class="row">
+						<div class="col-md-9">
+							<h2 id="headline"></h2>
+						</div>
+						<div class="col-md-2 offset-md-1">
+							<button id="prevArticle" type="button" class="btn"><i class="fa fa-arrow-circle-up fa-5x"></i></button>
+						</div>
+					</div>
+					<div class="row article-mid">
+						<div class="col-md-7 lead">
+							<p id="article-text"></p>
+						</div>
+						<div class="col-md-5 img-section" id="img-section">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 pt-4">
+							<p class="news-website" id="full-article">Full article at <a href=""><span id="website_names"></span></a></p>
+						</div>
+						<div class="col-md-2">
+							<button id="nextArticle" type="button" class="btn"><i class="fa fa-arrow-circle-down fa-5x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container-fluid footer-section">
+			<div class="btn-group-horizontal text-center">
+				<a href="https://www.linkedin.com/in/ronak-upasham-578610188/" target="_blank"><i class="fa fa-linkedin fa-2x mr-2 mt-2 mb-2"></i></a>
+				<a href="https://github.com" target="_blank"><i class="fa fa-github fa-2x ml-2 m5-2 mb-2"></i></a>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="{{ url_for('static', filename='app.js') }}"></script>
+	</body>
+</html>
